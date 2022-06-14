@@ -379,6 +379,26 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 // ## REMOVE
 
+// Vampire.findOneAndDelete(
+//   {hair_color: 'brown' }, 
+//   (err, vampire)=>{
+//   console.log(vampire); 
+// });
+
+// Vampire.deleteMany(
+//   {eye_color: 'blue' }, 
+//   (err, vampire)=>{
+//     console.log(vampire); 
+//   }
+// );
+
+// Vampire.find(
+//   {eye_color: "blue"},
+//   (err, vampire) => {
+//     console.log(vampire)
+//   }
+// );
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
