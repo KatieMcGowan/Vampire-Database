@@ -27,6 +27,9 @@ const vampireSchema = new Schema({
   gender: {
     type: String,
   },
+  title: {
+    type: String,
+  },
   victims: {
     type: Number,
     min: 0,

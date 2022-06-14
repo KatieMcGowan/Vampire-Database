@@ -157,6 +157,47 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+// Vampire.find({title: {$exists:true}},
+//   (err, vampires) => {
+//     console.log("First exists selection")
+//     console.log(vampires)
+//   }
+// );
+
+// Vampire.find(
+//   {victims: {$exists:false}},
+//   (err, vampires) => {
+//     console.log("Second exists selection");
+//     console.log(vampires)
+//   }
+// );
+
+// Vampire.find(
+//   {$and:
+//     [
+//       {title: {$exists: true}},
+//       {victims: {$exists: false}}
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log("Third exists selection");
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {$and: 
+//     [
+//       {victims: {$exists: true}},
+//       {victims: {$gt: 1000}}
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log("Fourth exists selection");
+//     console.log(vampires);
+//   }
+// );
+
 /////////////////////////////////////////////////
 // ### Select with OR
 
