@@ -328,6 +328,15 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 // ## REPLACE
 
+// Vampire.findOneAndUpdate(
+//   { name: "Claudia" },
+//   { $set: { name: "Eve" } }, 
+//   { new : true }, 
+//   (err, vampire)=>{
+//     console.log(vampire);
+//   }
+// );
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
