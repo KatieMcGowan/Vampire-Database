@@ -117,7 +117,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {gender: "f"},
 //   (err, vampires) => {
-//     console.log("First query");
 //     console.log(vampires)
 //   }
 // );
@@ -125,7 +124,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {victims: {$gt: 500}},
 //   (err, vampires) => {
-//     console.log("Second query")
 //     console.log(vampires)
 //   }
 // );
@@ -133,7 +131,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {victims: {$lte: 150}},
 //   (err, vampires) => {
-//     console.log("Third query")
 //     console.log(vampires)
 //   }
 // );
@@ -141,7 +138,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {victims: {$ne: 210234}},
 //   (err, vampires) => {
-//     console.log("Fourth query")
 //     console.log(vampires)
 //   }
 // );
@@ -149,7 +145,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {victims: {$gt: 150, $lt: 500}},
 //   (err, vampires) => {
-//     console.log("Fifth query")
 //     console.log(vampires)
 //   }
 // );
@@ -159,7 +154,6 @@ mongoose.connection.on("disconnected", () =>{
 
 // Vampire.find({title: {$exists:true}},
 //   (err, vampires) => {
-//     console.log("First exists selection")
 //     console.log(vampires)
 //   }
 // );
@@ -167,7 +161,6 @@ mongoose.connection.on("disconnected", () =>{
 // Vampire.find(
 //   {victims: {$exists:false}},
 //   (err, vampires) => {
-//     console.log("Second exists selection");
 //     console.log(vampires)
 //   }
 // );
@@ -180,7 +173,6 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   },
 //   (err, vampires) => {
-//     console.log("Third exists selection");
 //     console.log(vampires);
 //   }
 // );
@@ -193,7 +185,6 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   },
 //   (err, vampires) => {
-//     console.log("Fourth exists selection");
 //     console.log(vampires);
 //   }
 // );
@@ -209,7 +200,6 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   }, 
 //   (err, vampires) => {
-//     console.log("First or selection");
 //     console.log(vampires);
 //   }
 // );
@@ -222,7 +212,6 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   }, 
 //   (err, vampires) => {
-//     console.log("First or selection");
 //     console.log(vampires);
 //   }
 // )
@@ -235,7 +224,6 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   }, 
 //   (err, vampires) => {
-//     console.log("First or selection");
 //     console.log(vampires);
 //   }
 // );
@@ -248,13 +236,57 @@ mongoose.connection.on("disconnected", () =>{
 //     ]
 //   }, 
 //   (err, vampires) => {
-//     console.log("First or selection");
 //     console.log(vampires);
 //   }
 // );
 
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
+
+// Vampire.find(
+//   {$or: 
+//     [
+//       {loves: {$eq: "frilly shirts"}},
+//       {loves: {$eq: "frilly collars"}},
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {loves: {$eq: "brooding"}},
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {$or: 
+//     [
+//       {loves: {$eq: "appearing innocent"}},
+//       {loves: {$eq: "trickery"}},
+//       {loves: {$eq: "lurking in rotting mansions"}},
+//       {loves: {$eq: "R&B music"}},
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {$and: 
+//     [
+//       {loves: {$eq: "fancy cloaks"}},
+//       {loves: {$nin: ["top hats", "virgin blood"]}},
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
 
 /////////////////////////////////////////////////
 //### Negative Selection
