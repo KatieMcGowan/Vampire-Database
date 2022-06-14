@@ -341,6 +341,40 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 // ## UPDATE
 
+// Vampire.findOneAndUpdate(
+//   { name: "Eve" },
+//   { $set: { gender: "m" } }, 
+//   { new : true }, 
+//   (err, vampire)=>{
+//     console.log(vampire);
+//   }
+// );
+
+// Vampire.findOneAndUpdate(
+//   { name: "Eve" },
+//   { $set: { name: "moniker" } }, 
+//   { new : true }, 
+//   (err, vampire)=>{
+//     console.log(vampire);
+//   }
+// );
+
+// Vampire.updateMany(
+//   {gender: "f"},
+//   {$set: {gender: "fems"}},
+//   {new: true},
+//   (err, vampire) => {
+//     console.log(vampire);
+//   }
+// );
+
+// Vampire.find(
+//   {gender: "fems"},
+//   (err, vampire) => {
+//     console.log(vampire)
+//   }
+// );
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REMOVE
