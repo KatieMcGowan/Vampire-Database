@@ -201,6 +201,58 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 // ### Select with OR
 
+// Vampire.find(
+//   {$or:
+//     [
+//       {location: {$eq: "New York, New York, US"}},
+//       {location: {$eq: "New Orleans, Louisiana, US"}},
+//     ]
+//   }, 
+//   (err, vampires) => {
+//     console.log("First or selection");
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {$or:
+//     [
+//       {loves: {$eq: "brooding"}},
+//       {loves: {$eq: "being tragic"}},
+//     ]
+//   }, 
+//   (err, vampires) => {
+//     console.log("First or selection");
+//     console.log(vampires);
+//   }
+// )
+
+// Vampire.find(
+//   {$or:
+//     [
+//       {victims: {$gt: 1000}},
+//       {loves: {$eq: "marshmallows"}},
+//     ]
+//   }, 
+//   (err, vampires) => {
+//     console.log("First or selection");
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {$or:
+//     [
+//       {hair_color: {$eq: "red"}},
+//       {eye_color: {$eq: "green"}},
+//     ]
+//   }, 
+//   (err, vampires) => {
+//     console.log("First or selection");
+//     console.log(vampires);
+//   }
+// );
+
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
