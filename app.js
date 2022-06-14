@@ -291,6 +291,39 @@ mongoose.connection.on("disconnected", () =>{
 /////////////////////////////////////////////////
 //### Negative Selection
 
+// Vampire.find(
+//   {$and: 
+//     [
+//       {loves: {$eq: "ribbons"}},
+//       {eye_color: {$ne: "brown"}},
+//     ]
+//   },
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {location: {$ne: "Rome, Italy"}},
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
+// Vampire.find(
+//   {loves: {$nin: ["fancy cloaks", "frilly shirtsleeves", "appearing innocent", "being tragic", "brooding"]}},
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// )
+
+// Vampire.find(
+//   {victims: {$lte: 200}},
+//   (err, vampires) => {
+//     console.log(vampires);
+//   }
+// );
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
